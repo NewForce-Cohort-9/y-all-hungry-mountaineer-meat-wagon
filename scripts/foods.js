@@ -3,7 +3,7 @@ export const foodChoices = async () => {
     const foods = await response.json ()
 
 //2
-    let foodHTML = `<select id=food>
+    let foodHTML = `<select id="food">
     <option value ="0">Choose your food:</option>`
 
 //3
