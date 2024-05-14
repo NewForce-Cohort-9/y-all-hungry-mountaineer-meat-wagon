@@ -22,6 +22,11 @@ export const setDessert = (chosenDessertId) => {
     console.log(transientState)
 }
 
+export const setLocation = (chosenLocationId) => {
+    transientState.locationId = chosenLocationId
+    console.log(transientState)
+}
+
 export const saveOrder = async () => {
 
     const postOptions = {
@@ -32,9 +37,10 @@ export const saveOrder = async () => {
         body: JSON.stringify(transientState)
 
 }
+const response = await fetch("http://localhost:8088/orders", postOptions)
+  const customEvent = new CustomEvent("newOrder")
+  document.dispatchEvent(customEvent)
 }
 
   // Send the transient state to your API
-  const response = await fetch("http://localhost:8088/orders", postOptions)
-  const customEvent = new CustomEvent("newOrder")
-  document.dispatchEvent(customEvent)
+  
