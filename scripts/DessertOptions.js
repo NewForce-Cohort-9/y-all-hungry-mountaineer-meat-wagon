@@ -7,11 +7,13 @@ export const dessertChoices = async () => {
 
         const divStringArray = desserts.map(
             (dessert) => {
-                return `option value='${dessert.id}'>${dessert.name}</option>`
+                return `<option value='${dessert.id}'>${dessert.name} ${dessert.img}</option>`
             }
         )
 
         dessertChoicesHTML += divStringArray.join("")
         dessertChoicesHTML += "</select>"
+
+        return dessertChoicesHTML
 
 }
