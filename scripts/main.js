@@ -12,7 +12,7 @@ const render = async () => {
     ${locationOptionsHTML}
     </section>
     <section class="choices__food options">
-            <h2>Food</h2>
+        <h2>Food</h2>
             ${foodHTML}
         </section>`
 
