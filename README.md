@@ -31,10 +31,10 @@ Each food truck should only list drink items that are in stock on its menu. Each
 ## Dessert
 Each food truck should only list dessert items that are in stock. Each dessert should have a name, a price, an image, and a description.
 
-## Happy Toys
+<!-- ## Happy Toys
 > This is only for a group of 5
 
-Each food truck should have a list with only happy toys that are in stock. Each toy shouold have a price, a name, and an image.
+Each food truck should have a list with only happy toys that are in stock. Each toy shouold have a price, a name, and an image. -->
 
 ## CSS
 
