@@ -1,11 +1,24 @@
 //add the required properties to the object below for your order
 const transientState = {
-    foodId: 0
+    foodId: 0,
+    drinkId: 0,
+    dessertId: 0,
+    locationId: 0
 }
 
 //add the required setter functions to create your order
 export const setFood = (chosenFoodId) => {
     transientState.foodId = chosenFoodId
+    console.log(transientState)
+}
+
+export const setDrink = (chosenDrinkId) => {
+    transientState.drinkId = chosenDrinkId
+    console.log(transientState)
+}
+
+export const setDessert = (chosenDessertId) => {
+    transientState.dessertId = chosenDessertId
     console.log(transientState)
 }
 
