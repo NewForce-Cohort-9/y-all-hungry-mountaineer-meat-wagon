@@ -3,7 +3,7 @@ import { setFood } from "./transientState.js"
 
 //5
 const handleFoodChange = (event) => {
-    if (event.target.name === "food") {
+    if (event.target.id === "food") {
         setFood(parseInt(event.target.value
         ))
     }
