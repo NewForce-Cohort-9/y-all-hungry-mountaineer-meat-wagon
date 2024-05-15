@@ -1,3 +1,18 @@
+//4 
+import { setFood } from "./transientState.js"
+
+//5
+const handleFoodChange = (event) => {
+    if (event.target.name === "food") {
+        setFood(parseInt(event.target.value
+        ))
+    }
+}
+
+//6
+document.addEventListener("change", handleFoodChange)
+
+//1
 export const foodChoices = async () => {
     const response = await fetch("http://localhost:8088/foods")
     const foods = await response.json ()
@@ -10,13 +25,15 @@ export const foodChoices = async () => {
     const divStringArray = foods.map(
         (food) => {
             return  `
-            <option value="${food.id}">Price:${food.price}---
-            ${food.name}---
-            ${food.description}
+            <option value="${food.id}">
+            Item:${food.name}
+            Price:$${food.price}
+            Description:${food.description}
             </option>
         `
         }
     )
+   
 
     //3 Link to Main
     foodHTML += divStringArray.join("")
