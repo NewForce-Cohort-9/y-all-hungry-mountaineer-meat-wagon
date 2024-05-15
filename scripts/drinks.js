@@ -6,7 +6,7 @@ export const drinkChoices = async () => {
 <option value="0">Drink options</option>`
 
 const divStringArray = drinks.map((drink) => {
-    return `<option value="${drink.id}">${drink.name}</option>`;
+    return `<option value="${drink.id}">${drink.name}-$${drink.price}-${drink.description}</option>`;
 })
 
 
