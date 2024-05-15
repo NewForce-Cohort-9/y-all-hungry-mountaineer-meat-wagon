@@ -1,0 +1,13 @@
+option {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  option strong {
+    font-weight: bold;
+  }
+  
+  option span {
+    color: #666;
+  }
+  
