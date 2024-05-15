@@ -1,26 +1,13 @@
-
-import { drinkChoices } from "./drinks.js"
-const container = document.querySelector("#container")
-const renderDrinkOptions = async () => {
-    const optionsHTML = await drinkChoices();
-    const compostedHTML =`
-    <section>
-    ${optionsHTML}
-    </section>
-    `
-    container.innerHTML = compostedHTML
-}
-
-renderDrinkOptions()
-
 import { foodChoices } from "./foods.js"
-import { dessertChoices } from "./DessertOptions.js";
+import { dessertChoices } from "./desserts.js"
+import { drinkChoices } from "./drinks.js";
 
 const container = document.querySelector("#container")
 
 const render = async () => {
     const foodHTML = await foodChoices()
     const dessertChoicesHTML = await dessertChoices()
+    const drinkHTML = await drinkChoices()
     const composedHTML = `
     <h1>Mountaineer Meat Wagon</h1>
 
@@ -31,6 +18,10 @@ const render = async () => {
         <section class="choices__dessert options">
             <h2>Dessert</h2>
             ${dessertChoicesHTML}
+        </section>
+        <section class="choices__drink options">
+            <h2>Drinks</h2>
+            ${drinkHTML}
         </section>`
 
     container.innerHTML = composedHTML
