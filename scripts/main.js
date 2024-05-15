@@ -1,11 +1,14 @@
-import { locationOptions } from "./locationsList.js";
 import { foodChoices } from "./foods.js"
-import { drinkChoices } from "./drinks.js"
+import { dessertChoices } from "./desserts.js"
+import { drinkChoices } from "./drinks.js";
+
+const container = document.querySelector("#container")
 
 const render = async () => {
     const locationOptionsHTML = await locationOptions()
     const foodHTML = await foodChoices()
-    const optionsHTML = await drinkChoices();
+    const dessertChoicesHTML = await dessertChoices()
+    const drinkHTML = await drinkChoices()
     const composedHTML = `
     <section>
     ${locationOptionsHTML}
@@ -15,11 +18,15 @@ const render = async () => {
             ${foodHTML}
             
         </section>
-        
-        <section>
-        <h2>Drinks</h2>
-        ${optionsHTML}
+        <section class="choices__dessert options">
+            <h2>Dessert</h2>
+            ${dessertChoicesHTML}
+        </section>
+        <section class="choices__drink options">
+            <h2>Drinks</h2>
+            ${drinkHTML}
         </section>`
+
     container.innerHTML = composedHTML
 }
 
