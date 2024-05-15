@@ -297,12 +297,6 @@
     }
   ],
   "orders": [
-    {
-      "foodId": 0,
-      "drinkId": 0,
-      "dessertId": 0,
-      "locationId": 1,
-      "id": 1
-    }
+    
   ]
 }
