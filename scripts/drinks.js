@@ -1,6 +1,6 @@
 export const drinkChoices = async (locationId) => {
     const response = await fetch(`http://localhost:8088/locationDrinks?truckId=${locationId}`)
-    const locationDrinks = await response.json()
+    const locationDrinks = await response.json() //see if drinks are available at chosen location
     const allDrinksResponse = await fetch('http://localhost:8088/drinks')
     const allDrinks = await allDrinksResponse.json()
 
