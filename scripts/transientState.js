@@ -1,5 +1,5 @@
 //add the required properties to the object below for your order
-const transientState = {
+export const transientState = {
     foodId: 0,
     drinkId: 0,
     dessertId: 0,
@@ -28,6 +28,10 @@ export const setLocation = (chosenLocationId) => {
     const updateTransientState = new CustomEvent("updateTransientState")
     document.dispatchEvent(updateTransientState)
 }
+
+
+
+
 
 
 export const saveOrder = async () => {
