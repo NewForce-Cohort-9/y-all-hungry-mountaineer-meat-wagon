@@ -1,8 +1,9 @@
 import { setDessert } from "./transientState.js"
 
-const handleDessertChoice=(event) => {
-    if(event.target.id === "dessert")
+const handleDessertChoice = (event) => {
+    if (event.target.id === "dessert") {
         setDessert(parseInt(event.target.value))
+    }
 }
 
 export const dessertChoices = async () => {
@@ -12,7 +13,7 @@ export const dessertChoices = async () => {
     let dessertChoicesHTML = `<select id='dessert'>
         <option value='0'>Choose your Dessert:</option>`
 
-    const divStringArray = await desserts.map(
+    const divStringArray = desserts.map(
         (dessert) => {
             return `<option value='${dessert.id}'>${dessert.name}-$${dessert.price} • ${dessert.description}</option>`
         }
