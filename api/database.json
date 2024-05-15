@@ -301,22 +301,8 @@
       "foodId": 0,
       "drinkId": 0,
       "dessertId": 0,
-      "locationId": 0,
+      "locationId": 1,
       "id": 1
-    },
-    {
-      "foodId": 0,
-      "drinkId": 0,
-      "dessertId": 0,
-      "locationId": 0,
-      "id": 2
-    },
-    {
-      "foodId": 0,
-      "drinkId": 0,
-      "dessertId": 0,
-      "locationId": 0,
-      "id": 3
     }
   ]
 }
