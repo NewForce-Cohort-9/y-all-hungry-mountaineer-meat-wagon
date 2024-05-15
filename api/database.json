@@ -128,146 +128,181 @@
       "description": "We will serve you a milkshake in a bag. Only comes in vanilla.."
     }
   ],
-  "locationFoods":[
-    {"id": 1,
-    "truckId": 1,
-    "foodId": 1,
-    "quantity": 15
+  "locationFoods": [
+    {
+      "id": 1,
+      "truckId": 1,
+      "foodId": 1,
+      "quantity": 15
     },
-    {"id": 2,
-    "truckId": 1,
-    "foodId": 4,
-    "quantity": 15
+    {
+      "id": 2,
+      "truckId": 1,
+      "foodId": 4,
+      "quantity": 15
     },
-    {"id": 3,
-    "truckId": 2,
-    "foodId": 1,
-    "quantity": 15
+    {
+      "id": 3,
+      "truckId": 2,
+      "foodId": 1,
+      "quantity": 15
     },
-    {"id": 4,
-    "truckId": 2,
-    "foodId": 2,
-    "quantity": 5
+    {
+      "id": 4,
+      "truckId": 2,
+      "foodId": 2,
+      "quantity": 5
     },
-    {"id": 5,
-    "truckId": 2,
-    "foodId": 3,
-    "quantity": 5
+    {
+      "id": 5,
+      "truckId": 2,
+      "foodId": 3,
+      "quantity": 5
     },
-    {"id": 6,
-    "truckId": 2,
-    "foodId": 4,
-    "quantity": 15
+    {
+      "id": 6,
+      "truckId": 2,
+      "foodId": 4,
+      "quantity": 15
     },
-    {"id": 7,
-    "truckId": 3,
-    "foodId": 2,
-    "quantity": 7
+    {
+      "id": 7,
+      "truckId": 3,
+      "foodId": 2,
+      "quantity": 7
     },
-    {"id": 8,
-    "truckId": 3,
-    "foodId": 3,
-    "quantity": 7
+    {
+      "id": 8,
+      "truckId": 3,
+      "foodId": 3,
+      "quantity": 7
     },
-    {"id": 9,
-    "truckId": 4,
-    "foodId": 1,
-    "quantity": 50
+    {
+      "id": 9,
+      "truckId": 4,
+      "foodId": 1,
+      "quantity": 50
     }
   ],
-  "locationDrinks":[
-    {"id": 1,
-    "truckId": 1,
-    "drinkId": 1,
-    "quantity": 15
+  "locationDrinks": [
+    {
+      "id": 1,
+      "truckId": 1,
+      "drinkId": 1,
+      "quantity": 15
     },
-    {"id": 2,
-    "truckId": 1,
-    "drinkId": 4,
-    "quantity": 15
+    {
+      "id": 2,
+      "truckId": 1,
+      "drinkId": 4,
+      "quantity": 15
     },
-    {"id": 3,
-    "truckId": 2,
-    "drinkId": 1,
-    "quantity": 15
+    {
+      "id": 3,
+      "truckId": 2,
+      "drinkId": 1,
+      "quantity": 15
     },
-    {"id": 4,
-    "truckId": 2,
-    "drinkId": 2,
-    "quantity": 5
+    {
+      "id": 4,
+      "truckId": 2,
+      "drinkId": 2,
+      "quantity": 5
     },
-    {"id": 5,
-    "truckId": 2,
-    "drinkId": 3,
-    "quantity": 5
+    {
+      "id": 5,
+      "truckId": 2,
+      "drinkId": 3,
+      "quantity": 5
     },
-    {"id": 6,
-    "truckId": 2,
-    "drinkId": 4,
-    "quantity": 15
+    {
+      "id": 6,
+      "truckId": 2,
+      "drinkId": 4,
+      "quantity": 15
     },
-    {"id": 7,
-    "truckId": 3,
-    "drinkId": 2,
-    "quantity": 7
+    {
+      "id": 7,
+      "truckId": 3,
+      "drinkId": 2,
+      "quantity": 7
     },
-    {"id": 8,
-    "truckId": 3,
-    "drinkId": 3,
-    "quantity": 7
+    {
+      "id": 8,
+      "truckId": 3,
+      "drinkId": 3,
+      "quantity": 7
     },
-    {"id": 9,
-    "truckId": 4,
-    "drinkId": 1,
-    "quantity": 50
+    {
+      "id": 9,
+      "truckId": 4,
+      "drinkId": 1,
+      "quantity": 50
     }
   ],
-  "locationDesserts":[
-    {"id": 1,
-    "truckId": 1,
-    "dessertId": 1,
-    "quantity": 15
+  "locationDesserts": [
+    {
+      "id": 1,
+      "truckId": 1,
+      "dessertId": 1,
+      "quantity": 15
     },
-    {"id": 2,
-    "truckId": 1,
-    "dessertId": 4,
-    "quantity": 15
+    {
+      "id": 2,
+      "truckId": 1,
+      "dessertId": 4,
+      "quantity": 15
     },
-    {"id": 3,
-    "truckId": 2,
-    "dessertId": 1,
-    "quantity": 15
+    {
+      "id": 3,
+      "truckId": 2,
+      "dessertId": 1,
+      "quantity": 15
     },
-    {"id": 4,
-    "truckId": 2,
-    "dessertId": 2,
-    "quantity": 5
+    {
+      "id": 4,
+      "truckId": 2,
+      "dessertId": 2,
+      "quantity": 5
     },
-    {"id": 5,
-    "truckId": 2,
-    "dessertId": 3,
-    "quantity": 5
+    {
+      "id": 5,
+      "truckId": 2,
+      "dessertId": 3,
+      "quantity": 5
     },
-    {"id": 6,
-    "truckId": 2,
-    "dessertId": 4,
-    "quantity": 15
+    {
+      "id": 6,
+      "truckId": 2,
+      "dessertId": 4,
+      "quantity": 15
     },
-    {"id": 7,
-    "truckId": 3,
-    "dessertId": 2,
-    "quantity": 7
+    {
+      "id": 7,
+      "truckId": 3,
+      "dessertId": 2,
+      "quantity": 7
     },
-    {"id": 8,
-    "truckId": 3,
-    "dessertId": 3,
-    "quantity": 7
+    {
+      "id": 8,
+      "truckId": 3,
+      "dessertId": 3,
+      "quantity": 7
     },
-    {"id": 9,
-    "truckId": 4,
-    "dessertId": 1,
-    "quantity": 50
+    {
+      "id": 9,
+      "truckId": 4,
+      "dessertId": 1,
+      "quantity": 50
     }
   ],
-  "orders":[]
+  "orders": [
+    {
+      "foodId": 0,
+      "drinkId": 0,
+      "dessertId": 0,
+      "locationId": 1,
+      "id": 1
+    }
+  ]
 }
