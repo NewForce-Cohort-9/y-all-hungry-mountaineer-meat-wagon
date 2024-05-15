@@ -27,6 +27,7 @@ const render = async () => {
             <h2>Drinks</h2>
             ${drinkHTML}
         </section>`
+        
 
     container.innerHTML = composedHTML
 }
