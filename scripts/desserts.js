@@ -12,15 +12,14 @@ export const dessertChoices = async () => {
     let dessertChoicesHTML = `<select id='dessert'>
         <option value='0'>Choose your Dessert:</option>`
 
-        const divStringArray = desserts.map(
-            (dessert) => {
-                return `<option value='${dessert.id}'>${dessert.name}</option>`
-            }
-        )
+    const divStringArray = await desserts.map(
+        (dessert) => {
+            return `<option value='${dessert.id}'>${dessert.name}-$${dessert.price} • ${dessert.description}</option>`
+        }
+    )
 
-        dessertChoicesHTML += divStringArray.join("")
-        dessertChoicesHTML += "</select>"
+    dessertChoicesHTML += divStringArray.join("")
+    dessertChoicesHTML += "</select>"
 
-        return dessertChoicesHTML
-
+    return dessertChoicesHTML
 }
