@@ -13,6 +13,7 @@ const render = async () => {
     <section class="choices__food options">
         <h2>Food</h2>
             ${foodHTML}
+            
         </section>
         
         <section>
@@ -21,4 +22,11 @@ const render = async () => {
         </section>`
     container.innerHTML = composedHTML
 }
+
+document.addEventListener("updateTransientState", render)
 render()
+
+document.addEventListener("updateTransientState", event => {
+    console.log("State of data has changed. Regenerating HTML...")
+    render()
+})
