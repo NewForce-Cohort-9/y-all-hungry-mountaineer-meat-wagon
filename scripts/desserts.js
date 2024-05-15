@@ -10,18 +10,17 @@ export const dessertChoices = async () => {
     const desserts = await response.json()
     document.addEventListener("change", handleDessertChoice)
 
-    let dessertChoicesHTML = `<select id='dessert'>
+    let dessertChoicesHTML = `<select id='dessert' class='form-select bg-info text-white'>
         <option value='0'>Choose your Dessert:</option>`
 
-        const divStringArray = await desserts.map(
-            (dessert) => {
-                return `<option value='${dessert.id}'>${dessert.name}-$${dessert.price} • ${dessert.description}</option>`
-            }
-        )
+    const divStringArray = await desserts.map(
+        (dessert) => {
+            return `<option value='${dessert.id}'>${dessert.name}-$${dessert.price} • ${dessert.description}</option>`
+        }
+    )
 
-        dessertChoicesHTML += divStringArray.join("")
-        dessertChoicesHTML += "</select>"
+    dessertChoicesHTML += divStringArray.join("")
+    dessertChoicesHTML += "</select>"
 
-        return dessertChoicesHTML
-
+    return dessertChoicesHTML
 }
