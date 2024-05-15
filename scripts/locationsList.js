@@ -1,12 +1,14 @@
 import { setLocation, transientState } from "./transientState.js";
-
+let truckLocation = 0
 const handleLocationChoice = async (event) => {
+
     if (event.target.id === "location"){
         const response = await fetch("http://localhost:8088/locations")
         const locations = await response.json()
         locations.map(singleLocation => {
             if(singleLocation.id === parseInt(event.target.value)) {
                 document.querySelector("#locationChosen").innerHTML = `<h1>You have chosen: ${singleLocation.name}` 
+                return truckLocation = singleLocation.id
             }
         })
         setLocation(parseInt(event.target.value))
