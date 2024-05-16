@@ -11,7 +11,6 @@ document.addEventListener("change", handleFoodChange)
 export const foodChoices = async () => {
     const response = await fetch("http://localhost:8088/foods")
     const foods = await response.json()
-    document.addEventListener("change", handleFoodChange)
     let foodHTML = `<select id="food">
         <option value ="0">Choose your food:</option>`
 

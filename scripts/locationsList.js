@@ -10,6 +10,8 @@ const handleLocationChoice = async (event) => {
             }
         })
         setLocation(parseInt(event.target.value))
+        const customEvent = new CustomEvent("locationSelected")
+        document.dispatchEvent(customEvent)
     }
 }
 

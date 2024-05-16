@@ -6,7 +6,8 @@ export const transientState = {
     currentOrder: [],
     foods: [],
     drinks: [],
-    desserts: []
+    desserts: [],
+    currentLocation: []
 }
 
 // Fetch and store data
@@ -38,12 +39,18 @@ const setOrderProperty = (property, value) => {
     updateCurrentOrder()
 }
 
-export const setFood = (chosenFoodId) => setOrderProperty("foodId", chosenFoodId)
-export const setDrink = (chosenDrinkId) => setOrderProperty("drinkId", chosenDrinkId)
-export const setDessert = (chosenDessertId) => setOrderProperty("dessertId", chosenDessertId)
-export const setLocation = (chosenLocationId) => setOrderProperty("locationId", chosenLocationId)
+export const setDessert = (chosenDessertId) => {
+    transientState.dessertId = chosenDessertId
+    console.log(transientState)
+    updateCurrentOrder()
+}
 
-// Save the order to the server
+export const setLocation = (chosenLocationId) => {
+    transientState.locationId = chosenLocationId
+    console.log(transientState)
+    updateCurrentOrder()
+}
+
 export const saveOrder = async () => {
     const order = {
         foodId: transientState.foodId,
@@ -108,5 +115,4 @@ const renderCurrentOrder = () => {
     orderContainer.innerHTML = orderHTML
 }
 
-// Call initializeData to load data when the script runs
-initializeData()
+  
