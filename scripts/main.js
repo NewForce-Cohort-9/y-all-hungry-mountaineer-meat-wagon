@@ -38,6 +38,11 @@ const render = async () => {
     container.innerHTML = composedHTML
 }
 
+// document.addEventListener("updateTransientState", render)
 
 render()
 
+// document.addEventListener("updateTransientState", event => {
+//     console.log("State of data has changed. Regenerating HTML...")
+//     render()
+// })
