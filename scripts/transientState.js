@@ -1,4 +1,3 @@
-//add the required properties to the object below for your order
 export const transientState = {
     foodId: 0,
     drinkId: 0,
@@ -7,7 +6,8 @@ export const transientState = {
     currentOrder: [],
     foods: [],
     drinks: [],
-    desserts: []
+    desserts: [],
+    currentLocation: []
 }
 
 // Fetch and store data
@@ -47,6 +47,7 @@ export const setDessert = (chosenDessertId) => {
 export const setLocation = (chosenLocationId) => {
     transientState.locationId = chosenLocationId
     console.log(transientState)
+    renderCurrentFoodInventory()
     updateCurrentOrder()
 }
 
@@ -94,4 +95,97 @@ const renderCurrentOrder = () => {
     orderContainer.innerHTML = orderHTML
 }
 
-  
+
+export const renderCurrentFoodInventory = async () => { 
+    const inventoryResponse = await fetch("http://localhost:8088/locationFoods?_expand=food")
+    const locationFoods = await inventoryResponse.json()
+    let inventoryHTML= ""
+    
+    inventoryHTML += `<select id="food">
+        <option value="0"> Choose your food: </option>`
+
+         locationFoods.forEach((location) => {
+                    if(parseInt(location.truckId) === transientState.locationId) {
+
+                        inventoryHTML += `
+                        <option value="${location?.food.id}">
+                        Item: ${location?.food.name} 
+                        Price: $${location?.food.price} 
+                        Description: ${location?.food.description} 
+                        In-Stock: ${location.quantity}
+                        </option>`
+                    }
+                    
+                })
+    inventoryHTML += "</select>"
+    return inventoryHTML
+}
+export const renderCurrentDrinkInventory = async () => {
+    const drinkInventoryResponse = await fetch("http://localhost:8088/locationDrinks?_expand=drink")
+    const locationDrinks = await drinkInventoryResponse.json()
+    let inventoryHTML = ""
+    inventoryHTML += `<select id="drink">
+    <option value="0"> Choose your drink: </option>`
+
+     locationDrinks.forEach((location) => {
+                if(parseInt(location.truckId) === transientState.locationId) {
+
+                    inventoryHTML += `
+                    <option value="${location?.drink.id}">
+                    Item:${location?.drink.name} 
+                    Price: $${location?.drink.price} 
+                    Description: ${location?.drink.description} 
+                    In-Stock: ${location.quantity}
+                    </option>`
+                }
+                
+            })
+            inventoryHTML +="</select>"
+            return inventoryHTML
+}
+
+export const renderCurrentDessertInventory = async () => {
+    const dessertInventoryResponse = await fetch("http://localhost:8088/locationDesserts?_expand=dessert")
+    const locationDesserts = await dessertInventoryResponse.json()
+    let inventoryHTML = ""
+    inventoryHTML += `<select id="dessert">
+    <option value="0"> Choose your dessert: </option>`
+
+     locationDesserts.forEach((location) => {
+                if(parseInt(location.truckId) === transientState.locationId) {
+
+                    inventoryHTML += `
+                    <option value="${location?.dessert.id}">
+                    Item:${location?.dessert.name} 
+                    Price: $${location?.dessert.price} 
+                    Description: ${location?.dessert.description} 
+                    In-Stock: ${location.quantity}
+                    </option>`
+                }
+                
+            })
+            inventoryHTML +="</select>"
+            return inventoryHTML
+}
+
+const handleDessertChoice = (event) => {
+    if (event.target.id === "dessert") {
+        setDessert(parseInt(event.target.value))
+    }
+}
+document.addEventListener("change", handleDessertChoice)
+
+const handleDrinkChoice = (event) => {
+    if (event.target.id === "drink") {
+        setDrink(parseInt(event.target.value))
+    }
+}
+document.addEventListener("change", handleDrinkChoice)
+
+const handleFoodChange = (event) => {
+    if (event.target.id === "food") {
+        setFood(parseInt(event.target.value))
+    }
+}
+
+document.addEventListener("change", handleFoodChange)

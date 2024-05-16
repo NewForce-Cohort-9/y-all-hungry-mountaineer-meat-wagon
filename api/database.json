@@ -84,7 +84,7 @@
       "description": "Bottled Water imported from the most drought stricken country you can think of. Proceeds do NOT go to charity."
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Coke or Pepsi",
       "price": 2.99,
       "img": "https://images.pexels.com/photos/2983100/pexels-photo-2983100.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -182,6 +182,30 @@
       "truckId": 4,
       "foodId": 1,
       "quantity": 50
+    },
+    {
+      "id": 10,
+      "truckId": 1,
+      "foodId":0,
+      "quantity":0
+    },
+    {
+      "id": 10,
+      "truckId": 2,
+      "foodId":0,
+      "quantity":0
+    },
+    {
+      "id": 10,
+      "truckId": 3,
+      "foodId":0,
+      "quantity":0
+    },
+    {
+      "id": 10,
+      "truckId": 4,
+      "foodId":0,
+      "quantity":0
     }
   ],
   "locationDrinks": [
@@ -238,6 +262,30 @@
       "truckId": 4,
       "drinkId": 1,
       "quantity": 50
+    },
+    {
+      "id": 10,
+      "truckId": 1,
+      "drinkId":0,
+      "quantity":0
+    },
+    {
+      "id": 10,
+      "truckId": 2,
+      "drinkId":0,
+      "quantity":0
+    },
+    {
+      "id": 10,
+      "truckId": 3,
+      "drinkId":0,
+      "quantity":0
+    },
+    {
+      "id": 10,
+      "truckId": 4,
+      "drinkId":0,
+      "quantity":0
     }
   ],
   "locationDesserts": [
@@ -294,8 +342,33 @@
       "truckId": 4,
       "dessertId": 1,
       "quantity": 50
+    },
+    {
+      "id": 10,
+      "truckId": 1,
+      "dessertId":0,
+      "quantity":0
+    },
+    {
+      "id": 10,
+      "truckId": 2,
+      "dessertId":0,
+      "quantity":0
+    },
+    {
+      "id": 10,
+      "truckId": 3,
+      "dessertId":0,
+      "quantity":0
+    },
+    {
+      "id": 10,
+      "truckId": 4,
+      "dessertId":0,
+      "quantity":0
     }
   ],
+<<<<<<< HEAD
   "orders": [
     {
       "foodId": 0,
@@ -1061,4 +1134,7 @@
 >>>>>>> 7d6661ea7a3ad9e52f9109f54ea2f8129f5a9836
     }
   ]
+=======
+  "orders":[]
+>>>>>>> main
 }
