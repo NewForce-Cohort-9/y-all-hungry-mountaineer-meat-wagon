@@ -14,28 +14,27 @@ export const transientState = {
 const fetchData = async () => {
     const foodResponse = await fetch("http://localhost:8088/foods")
     transientState.foods = await foodResponse.json()
-    console.log("Foods fetched:", transientState.foods)
 
     const drinkResponse = await fetch("http://localhost:8088/drinks")
     transientState.drinks = await drinkResponse.json()
-    console.log("Drinks fetched:", transientState.drinks)
 
     const dessertResponse = await fetch("http://localhost:8088/desserts")
     transientState.desserts = await dessertResponse.json()
-    console.log("Desserts fetched:", transientState.desserts)
 }
 
-// Initialize data by calling fetchData and waiting for it to complete
-const initializeData = async () => {
-    await fetchData()
-    renderCurrentOrder()
-}
-initializeData()
+// Call fetchData to initialize data
+fetchData()
 
-// Add the required setter functions to create your order
-const setOrderProperty = (property, value) => {
-    transientState[property] = value
-    console.log(`${property} set to:`, value)
+//add the required setter functions to create your order
+export const setFood = (chosenFoodId) => {
+    transientState.foodId = chosenFoodId
+    console.log(transientState)
+    updateCurrentOrder()
+}
+
+export const setDrink = (chosenDrinkId) => {
+    transientState.drinkId = chosenDrinkId
+    console.log(transientState)
     updateCurrentOrder()
 }
 
@@ -48,37 +47,26 @@ export const setDessert = (chosenDessertId) => {
 export const setLocation = (chosenLocationId) => {
     transientState.locationId = chosenLocationId
     console.log(transientState)
+    renderCurrentFoodInventory()
     updateCurrentOrder()
 }
 
 export const saveOrder = async () => {
-    const order = {
-        foodId: transientState.foodId,
-        drinkId: transientState.drinkId,
-        dessertId: transientState.dessertId,
-        locationId: transientState.locationId,
-        currentOrder: transientState.currentOrder
-    }
-
-    console.log("Order to be saved:", order)
-
     const postOptions = {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(order)
+        body: JSON.stringify(transientState)
     }
-    await fetch("http://localhost:8088/orders", postOptions)
+    const response = await fetch("http://localhost:8088/orders", postOptions)
     const customEvent = new CustomEvent("newOrderCreated")
     document.dispatchEvent(customEvent)
-
-    // Recalculate and render the current order with the correct subtotal
-    updateCurrentOrder()
 }
+    // Send the transient state to your API
 
 // Update current order
-const updateCurrentOrder = () => {
+export const updateCurrentOrder = () => {
     const currentOrder = []
     const food = transientState.foods.find(food => food.id === transientState.foodId)
     const drink = transientState.drinks.find(drink => drink.id === transientState.drinkId)
@@ -89,30 +77,115 @@ const updateCurrentOrder = () => {
     if (dessert) currentOrder.push(dessert)
 
     transientState.currentOrder = currentOrder
-    console.log("Updated currentOrder:", transientState.currentOrder)
     renderCurrentOrder()
 }
 
 // Render current order
 const renderCurrentOrder = () => {
     const orderContainer = document.querySelector("#currentOrder")
-    if (!orderContainer) {
-        console.error("Order container element not found")
-        return
-    }
-
     let orderHTML = "<h2>Current Order</h2>"
 
     let subtotal = 0
     transientState.currentOrder.forEach(item => {
-        orderHTML += `<p><img src="${item.img}" alt="${item.name}" style="width:50px;height:50px;"> ${item.name} - $${item.price.toFixed(2)}</p>`
+        orderHTML += `<p><img src="${item.img}" alt="${item.name}" style="width:50px;height:50px;"> ${item.name} - $${item.price}</p>`
         subtotal += item.price
     })
-
-    console.log("Calculated subtotal:", subtotal)
 
     orderHTML += `<p><strong>Subtotal: $${subtotal.toFixed(2)}</strong></p>`
     orderContainer.innerHTML = orderHTML
 }
 
-  
+
+export const renderCurrentFoodInventory = async () => { 
+    const inventoryResponse = await fetch("http://localhost:8088/locationFoods?_expand=food")
+    const locationFoods = await inventoryResponse.json()
+    let inventoryHTML= ""
+    
+    inventoryHTML += `<select id="food">
+        <option value="0"> Choose your food: </option>`
+
+         locationFoods.forEach((location) => {
+                    if(parseInt(location.truckId) === transientState.locationId) {
+
+                        inventoryHTML += `
+                        <option value="${location?.food.id}">
+                        Item: ${location?.food.name} 
+                        Price: $${location?.food.price} 
+                        Description: ${location?.food.description} 
+                        In-Stock: ${location.quantity}
+                        </option>`
+                    }
+                    
+                })
+    inventoryHTML += "</select>"
+    return inventoryHTML
+}
+export const renderCurrentDrinkInventory = async () => {
+    const drinkInventoryResponse = await fetch("http://localhost:8088/locationDrinks?_expand=drink")
+    const locationDrinks = await drinkInventoryResponse.json()
+    let inventoryHTML = ""
+    inventoryHTML += `<select id="drink">
+    <option value="0"> Choose your drink: </option>`
+
+     locationDrinks.forEach((location) => {
+                if(parseInt(location.truckId) === transientState.locationId) {
+
+                    inventoryHTML += `
+                    <option value="${location?.drink.id}">
+                    Item:${location?.drink.name} 
+                    Price: $${location?.drink.price} 
+                    Description: ${location?.drink.description} 
+                    In-Stock: ${location.quantity}
+                    </option>`
+                }
+                
+            })
+            inventoryHTML +="</select>"
+            return inventoryHTML
+}
+
+export const renderCurrentDessertInventory = async () => {
+    const dessertInventoryResponse = await fetch("http://localhost:8088/locationDesserts?_expand=dessert")
+    const locationDesserts = await dessertInventoryResponse.json()
+    let inventoryHTML = ""
+    inventoryHTML += `<select id="dessert">
+    <option value="0"> Choose your dessert: </option>`
+
+     locationDesserts.forEach((location) => {
+                if(parseInt(location.truckId) === transientState.locationId) {
+
+                    inventoryHTML += `
+                    <option value="${location?.dessert.id}">
+                    Item:${location?.dessert.name} 
+                    Price: $${location?.dessert.price} 
+                    Description: ${location?.dessert.description} 
+                    In-Stock: ${location.quantity}
+                    </option>`
+                }
+                
+            })
+            inventoryHTML +="</select>"
+            return inventoryHTML
+}
+
+const handleDessertChoice = (event) => {
+    if (event.target.id === "dessert") {
+        setDessert(parseInt(event.target.value))
+    }
+}
+document.addEventListener("change", handleDessertChoice)
+
+const handleDrinkChoice = (event) => {
+    if (event.target.id === "drink") {
+        setDrink(parseInt(event.target.value))
+    }
+}
+document.addEventListener("change", handleDrinkChoice)
+
+const handleFoodChange = (event) => {
+    if (event.target.id === "food") {
+        setFood(parseInt(event.target.value))
+    }
+}
+
+document.addEventListener("change", handleFoodChange)
