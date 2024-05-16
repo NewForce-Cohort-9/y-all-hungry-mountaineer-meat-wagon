@@ -18,24 +18,27 @@ const render = async () => {
 
     const composedHTML = `
     <section>
-    ${locationOptionsHTML}
+        ${locationOptionsHTML}
     </section>
     <section class="choices__food options">
         <h2>Food</h2>
-            ${foodHTML}
-            
-        </section>
-        <section class="choices__dessert options">
-            <h2>Dessert</h2>
-            ${dessertChoicesHTML}
-        </section>
-        <section class="choices__drink options">
-            <h2>Drinks</h2>
-            ${drinkHTML}
-            
-            ${buttonHTML}
+        ${foodHTML}
+    </section>
+    <section class="choices__dessert options">
+        <h2>Dessert</h2>
+        ${dessertChoicesHTML}
+    </section>
+    <section class="choices__drink options">
+        <h2>Drinks</h2>
+        ${drinkHTML}
+    </section>
+    <section id="currentOrder">
+        <h2>Current Order</h2>
+    </section>
+    <section>
+        ${buttonHTML}
             ${orderListHTML}
-        </section>`
+    </section>`
 
     container.innerHTML = composedHTML
 }
@@ -43,8 +46,3 @@ const render = async () => {
 document.addEventListener("newOrderCreated", render)
 
 render()
-
-// document.addEventListener("updateTransientState", event => {
-//     console.log("State of data has changed. Regenerating HTML...")
-//     render()
-// })

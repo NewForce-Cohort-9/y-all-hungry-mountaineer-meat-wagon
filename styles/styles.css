@@ -1,13 +1,12 @@
-/* Custom CSS for dropdown options */
 select#dessert {
-  width: 100%; /* Set the width of the dropdown */
-  padding: 8px; /* Add padding inside the dropdown */
-  border: 1px solid #ccc; /* Add a border around the dropdown */
-  border-radius: 4px; /* Add rounded corners to the dropdown */
-  font-family: Arial, sans-serif; /* Set the font family for the dropdown */
-  font-size: 14px; /* Set the font size for the dropdown */
-  color: #333; /* Set the text color of the dropdown */
-  background-color: #fff; /* Set the background color of the dropdown */
+  width: 100%; 
+  padding: 8px;
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-family: Arial, sans-serif; 
+  font-size: 14px; 
+  color: #333; 
+  background-color: #fff; 
 }
 
   
