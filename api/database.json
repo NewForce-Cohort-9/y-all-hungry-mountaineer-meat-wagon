@@ -319,6 +319,10 @@
       "id": 3
     },
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 54be46702d79846c524e54e447825c5e925a93a7
       "foodId": 1,
       "drinkId": 2,
       "dessertId": 2,
@@ -1037,6 +1041,30 @@
         }
       ],
       "id": 10
+<<<<<<< HEAD
+=======
+    },
+    {
+      "foodId": 2,
+      "drinkId": 0,
+      "dessertId": 0,
+      "locationId": 2,
+      "id": 11
+=======
+      "foodId": 2,
+      "drinkId": 2,
+      "dessertId": 2,
+      "locationId": 2,
+      "id": 4
+    },
+    {
+      "foodId": 2,
+      "drinkId": 1,
+      "dessertId": 1,
+      "locationId": 1,
+      "id": 5
+>>>>>>> 7d6661ea7a3ad9e52f9109f54ea2f8129f5a9836
+>>>>>>> 54be46702d79846c524e54e447825c5e925a93a7
     }
   ]
 }

@@ -3,6 +3,7 @@ import { dessertChoices } from "./desserts.js"
 import { drinkChoices } from "./drinks.js";
 import { locationOptions } from "./locationsList.js";
 import { saveSubmission } from "./placeOrder.js";
+import { orderList } from "./saveOrders.js";
 
 const container = document.querySelector("#container")
 
@@ -12,6 +13,8 @@ const render = async () => {
     const dessertChoicesHTML = await dessertChoices()
     const drinkHTML = await drinkChoices()
     const buttonHTML = saveSubmission()
+    const orderListHTML = await orderList()
+
 
     const composedHTML = `
     <section>
@@ -34,11 +37,12 @@ const render = async () => {
     </section>
     <section>
         ${buttonHTML}
+            ${orderListHTML}
     </section>`
 
     container.innerHTML = composedHTML
 }
 
-document.addEventListener("updateTransientState", render)
+document.addEventListener("newOrderCreated", render)
 
 render()
