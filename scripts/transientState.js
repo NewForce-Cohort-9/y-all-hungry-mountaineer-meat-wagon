@@ -1,4 +1,5 @@
 //add the required properties to the object below for your order
+// import { foodChoices } from "./foods.js"
 export const transientState = {
     foodId: 0,
     drinkId: 0,
@@ -7,7 +8,8 @@ export const transientState = {
     currentOrder: [],
     foods: [],
     drinks: [],
-    desserts: []
+    desserts: [],
+    currentLocation: []
 }
 
 // Fetch and store data
@@ -93,3 +95,16 @@ const renderCurrentOrder = () => {
     orderHTML += `<p><strong>Subtotal: $${subtotal.toFixed(2)}</strong></p>`
     orderContainer.innerHTML = orderHTML
 }
+
+// export const updateInventory = () => {
+//     const currentLocation = []
+//     const location = transient.locationId.find(location => location.id === transientState.locationId)
+//     if(location) currentLocation.push(location)
+
+//         transientState.currentLocation = currentLocation
+//         renderCurrentInventory()
+// }
+
+// const renderCurrentInventory = () => { 
+    
+// }
