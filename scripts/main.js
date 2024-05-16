@@ -4,6 +4,7 @@ import { drinkChoices } from "./drinks.js";
 import { locationOptions } from "./locationsList.js";
 import { saveSubmission } from "./placeOrder.js";
 import { orderList } from "./saveOrders.js";
+import { renderCurrentInventory } from "./transientState.js";
 
 const container = document.querySelector("#container")
 
@@ -14,6 +15,7 @@ const render = async () => {
     const drinkHTML = await drinkChoices()
     const buttonHTML = saveSubmission()
     const orderListHTML = await orderList()
+    const inventoryHTML = await renderCurrentInventory()
 
 
     const composedHTML = `
@@ -22,6 +24,7 @@ const render = async () => {
     </section>
     <section class="choices__food options">
         <h2>Food</h2>
+        ${inventoryHTML}
         ${foodHTML}
     </section>
     <section class="choices__dessert options">

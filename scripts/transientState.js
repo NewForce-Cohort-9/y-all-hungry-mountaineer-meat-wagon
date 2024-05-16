@@ -1,5 +1,5 @@
 //add the required properties to the object below for your order
-// import { foodChoices } from "./foods.js"
+import { foodChoices } from "./foods.js"
 export const transientState = {
     foodId: 0,
     drinkId: 0,
@@ -49,6 +49,7 @@ export const setDessert = (chosenDessertId) => {
 export const setLocation = (chosenLocationId) => {
     transientState.locationId = chosenLocationId
     console.log(transientState)
+    renderCurrentInventory()
     updateCurrentOrder()
 }
 
@@ -96,15 +97,34 @@ const renderCurrentOrder = () => {
     orderContainer.innerHTML = orderHTML
 }
 
-// export const updateInventory = () => {
-//     const currentLocation = []
-//     const location = transient.locationId.find(location => location.id === transientState.locationId)
-//     if(location) currentLocation.push(location)
 
-//         transientState.currentLocation = currentLocation
-//         renderCurrentInventory()
-// }
+export const renderCurrentInventory = async () => { 
+    const response = await fetch("http://localhost:8088/foods")
+    const foods = await response.json()
+    const inventoryResponse = await fetch("http://localhost:8088/locationFoods")
+    const locationFoods = await inventoryResponse.json()
+    let foodHTML = `<select id="food">
+        <option value ="0">Choose your food:</option>`
 
-// const renderCurrentInventory = () => { 
+        const divStringArray = foods.map(
+            (food) => {
+                const truckFoodsArray = locationFoods.map(location => {
+                    if(parseInt(locationFoods.truckId) === transientState.locationId) {
+
+                        return foodHTML += `
+                        <option value="${food.id}">
+                        Item:${food.name}
+                        Price:$${food.price}
+                        Description:${food.description}
+                        In-Stock: ${location.quantity}
+                        </option>`
+                    }
+                    
+                })
+                foodHTML += truckFoodsArray.join("")
+            })
+    foodHTML += divStringArray.join("")
+    foodHTML += "</select>"
+    return foodHTML
     
-// }
+}
