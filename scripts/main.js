@@ -3,6 +3,7 @@ import { dessertChoices } from "./desserts.js"
 import { drinkChoices } from "./drinks.js";
 import { locationOptions } from "./locationsList.js";
 import { saveSubmission } from "./placeOrder.js";
+import { orderList } from "./saveOrders.js";
 
 const container = document.querySelector("#container")
 
@@ -12,31 +13,36 @@ const render = async () => {
     const dessertChoicesHTML = await dessertChoices()
     const drinkHTML = await drinkChoices()
     const buttonHTML = saveSubmission()
+    const orderListHTML = await orderList()
 
 
     const composedHTML = `
     <section>
-    ${locationOptionsHTML}
+        ${locationOptionsHTML}
     </section>
     <section class="choices__food options">
         <h2>Food</h2>
-            ${foodHTML}
-            
-        </section>
-        <section class="choices__dessert options">
-            <h2>Dessert</h2>
-            ${dessertChoicesHTML}
-        </section>
-        <section class="choices__drink options">
-            <h2>Drinks</h2>
-            ${drinkHTML}
-            
-            ${buttonHTML}
-        </section>`
+        ${foodHTML}
+    </section>
+    <section class="choices__dessert options">
+        <h2>Dessert</h2>
+        ${dessertChoicesHTML}
+    </section>
+    <section class="choices__drink options">
+        <h2>Drinks</h2>
+        ${drinkHTML}
+    </section>
+    <section id="currentOrder">
+        <h2>Current Order</h2>
+    </section>
+    <section>
+        ${buttonHTML}
+            ${orderListHTML}
+    </section>`
 
     container.innerHTML = composedHTML
 }
 
+document.addEventListener("newOrderCreated", render)
 
 render()
-
