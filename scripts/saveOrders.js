@@ -18,6 +18,9 @@ export const orderList = async () => {
 
     let orderHTML = ""
     for (const order of orders) {
+        let subtotal = 0
+
+        orderHTML += `<div class="order"><h3>Order ID: ${order.id}</h3>`
     
         for (const location of locations) {
             if (location.id === order.locationId){
@@ -26,19 +29,21 @@ export const orderList = async () => {
         }
         for (const food of foods) {
             if (food.id === order.foodId){
-                orderHTML += `<div>${food.name}</div>`
+                orderHTML += `<div>${food.name} - $${food.price}</div>`
             }
         }
         for (const drink of drinks) {
             if (drink.id === order.drinkId){
-                orderHTML += `<div>${drink.name}</div>`
+                orderHTML += `<div>${drink.name} - $${drink.price}</div>`
             }
         }
         for (const dessert of desserts) {
             if (dessert.id === order.dessertId){
-                orderHTML += `<div>${dessert.name}</div>`
+                orderHTML += `<div>${dessert.name} - $${dessert.price}</div>`
             }
         }
+        orderHTML += `<div><strong>Subtotal: $${subtotal.toFixed(2)}</strong></div>`
+        orderHTML += `</div><hr>`
         
     }
     return orderHTML
