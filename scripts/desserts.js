@@ -11,7 +11,7 @@ export const dessertChoices = async () => {
     const desserts = await response.json()
     document.addEventListener("change", handleDessertChoice)
     let dessertChoicesHTML = `<select id='dessert'>
-        <option value='0'>Choose your Dessert:</option>`
+        <option value='0'>Choose your Dessert</option>`
 
     const divStringArray = desserts.map(
         (dessert) => {
