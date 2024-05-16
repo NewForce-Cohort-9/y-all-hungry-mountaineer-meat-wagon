@@ -86,7 +86,7 @@ const renderCurrentOrder = () => {
 
     let subtotal = 0
     transientState.currentOrder.forEach(item => {
-        orderHTML += `<p>${item.name} - $${item.price}</p>`
+        orderHTML += `<p><img src="${item.img}" alt="${item.name}" style="width:50px;height:50px;"> ${item.name} - $${item.price}</p>`
         subtotal += item.price
     })
 
