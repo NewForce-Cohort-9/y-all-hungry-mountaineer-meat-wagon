@@ -296,27 +296,5 @@
       "quantity": 50
     }
   ],
-  "orders": [
-    {
-      "foodId": 1,
-      "drinkId": 0,
-      "dessertId": 0,
-      "locationId": 0,
-      "id": 1
-    },
-    {
-      "foodId": 1,
-      "drinkId": 0,
-      "dessertId": 0,
-      "locationId": 2,
-      "id": 2
-    },
-    {
-      "foodId": 2,
-      "drinkId": 0,
-      "dessertId": 0,
-      "locationId": 2,
-      "id": 3
-    }
-  ]
+  "orders": []
 }
