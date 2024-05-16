@@ -93,5 +93,3 @@ const renderCurrentOrder = () => {
     orderHTML += `<p><strong>Subtotal: $${subtotal.toFixed(2)}</strong></p>`
     orderContainer.innerHTML = orderHTML
 }
-
-  
