@@ -1,8 +1,9 @@
 import { setDrink } from "./transientState.js"
 
-const handleDrinkChoice =(event) => {
-    if(event.target.id === "drink")
+const handleDrinkChoice = (event) => {
+    if (event.target.id === "drink") {
         setDrink(parseInt(event.target.value))
+    }
 }
 
 export const drinkChoices = async () => {

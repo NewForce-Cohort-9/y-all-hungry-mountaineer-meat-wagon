@@ -13,36 +13,32 @@ const render = async () => {
     const drinkHTML = await drinkChoices()
     const buttonHTML = saveSubmission()
 
-
     const composedHTML = `
     <section>
-    ${locationOptionsHTML}
+        ${locationOptionsHTML}
     </section>
     <section class="choices__food options">
         <h2>Food</h2>
-            ${foodHTML}
-            
-        </section>
-        <section class="choices__dessert options">
-            <h2>Dessert</h2>
-            ${dessertChoicesHTML}
-        </section>
-        <section class="choices__drink options">
-            <h2>Drinks</h2>
-            ${drinkHTML}
-            
-            ${buttonHTML}
-        </section>`
-        
+        ${foodHTML}
+    </section>
+    <section class="choices__dessert options">
+        <h2>Dessert</h2>
+        ${dessertChoicesHTML}
+    </section>
+    <section class="choices__drink options">
+        <h2>Drinks</h2>
+        ${drinkHTML}
+    </section>
+    <section id="currentOrder">
+        <h2>Current Order</h2>
+    </section>
+    <section>
+        ${buttonHTML}
+    </section>`
 
     container.innerHTML = composedHTML
 }
 
-// document.addEventListener("updateTransientState", render)
+document.addEventListener("updateTransientState", render)
 
 render()
-
-// document.addEventListener("updateTransientState", event => {
-//     console.log("State of data has changed. Regenerating HTML...")
-//     render()
-// })
