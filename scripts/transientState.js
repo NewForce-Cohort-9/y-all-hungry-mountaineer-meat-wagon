@@ -64,7 +64,7 @@ export const saveOrder = async () => {
         dessertId: transientState.dessertId,
         locationId: transientState.locationId,
         currentOrder: currentOrder
-    };
+    }
 
     const postOptions = {
         method: "POST",
@@ -141,7 +141,7 @@ export const renderCurrentInventory = async (type) => {
             const item = location[itemType];
             inventoryHTML += `
                 <option value="${item.id}">
-                ${item.name} - $${item.price} • ${item.description} - ${location.quantity}
+                ${item.name} - $${item.price} • ${item.description} • In Stock: ${location.quantity}
                 </option>`;
         }
     });
