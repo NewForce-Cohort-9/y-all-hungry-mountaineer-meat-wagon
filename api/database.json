@@ -368,5 +368,36 @@
       "quantity": 0
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "foodId": 2,
+      "drinkId": 3,
+      "dessertId": 3,
+      "locationId": 3,
+      "currentOrder": [
+        {
+          "id": 2,
+          "name": "Hot Me Momma Like a Wagon Wheel",
+          "price": 18.99,
+          "img": "https://www.shutterstock.com/shutterstock/photos/111139658/display_1500/stock-photo-double-hot-dog-111139658.jpg",
+          "description": "A traditional bratwurst, imported from directly from Bavaria and covered in cheese sauce."
+        },
+        {
+          "id": 3,
+          "name": "Bottled Water",
+          "price": 11.99,
+          "img": "https://images.pexels.com/photos/1000084/pexels-photo-1000084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "description": "Bottled Water imported from the most drought stricken country you can think of. Proceeds do NOT go to charity."
+        },
+        {
+          "id": 3,
+          "name": "Wat in Tarnation",
+          "price": 12.99,
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6Jz10ZFm45xVXqLSGHxPIxz-Im7yodnv2jZ6PEOONEw&sg",
+          "description": "Fudge so chewy it will never go down."
+        }
+      ],
+      "id": 1
+    }
+  ]
 }

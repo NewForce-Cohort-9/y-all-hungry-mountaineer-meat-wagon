@@ -1,78 +1,45 @@
 select#location {
-  width: 100%; 
+  width: 20%; 
   padding: 8px;
-  border: 3px solid #d9d9d9; 
+  border: 3px solid rgb(114, 114, 175); 
   border-radius: 4px; 
   font-family: Arial, sans-serif; 
   font-size: 14px; 
-  color: #333; 
-  background-color: #ffffff; 
+  color: white; 
+  background-color: grey; 
 }
 
 select#dessert {
-  width: 100%; 
+  width: 89%; 
   padding: 8px;
-  border: 3px solid #ccc; 
+  border: 3px solid grey; 
   border-radius: 4px; 
   font-family: Arial, sans-serif; 
   font-size: 14px; 
-  color: #333; 
-  background-color: #ffc400; 
+  color: white; 
+  background-color: rgb(114, 114, 175); 
 }
 
 select#drink {
-  width: 25%; 
+  width: 89%; 
   padding: 8px;
-  border: 1px solid #0640dd; 
+  border: 3px solid grey; 
   border-radius: 4px; 
   font-family: Arial, sans-serif; 
   font-size: 14px; 
-  color: #333; 
-  background-color: #ffc400; 
+  color: white; 
+  background-color: rgb(114, 114, 175); 
 }
 
 select#food {
-  width: 25%; 
+  width: 89%; 
   padding: 8px;
-  border: 1px solid #0640dd; 
+  border: 3px solid grey; 
   border-radius: 4px; 
   font-family: Arial, sans-serif; 
   font-size: 14px; 
-  color: #333; 
-  background-color: #ffc400; 
-}
-
-select#drink {
-  width: 100%; 
-  padding: 8px;
-  border: 3px solid #ccc; 
-  border-radius: 4px; 
-  font-family: Arial, sans-serif; 
-  font-size: 14px; 
-  color: #333; 
-  background-color: #fff; 
-}
-
-select#food {
-  width: 100%; 
-  padding: 8px;
-  border: 3px solid #ccc; 
-  border-radius: 4px; 
-  font-family: Arial, sans-serif; 
-  font-size: 14px; 
-  color: #333; 
-  background-color: #fff; 
-}
-
-select#button {
-  width: 100%; 
-  padding: 8px;
-  border: 3px solid #ccc; 
-  border-radius: 4px; 
-  font-family: Arial, sans-serif; 
-  font-size: 14px; 
-  color: #333; 
-  background-color: #fff; 
+  color: white; 
+  background-color: rgb(114, 114, 175); 
 }
 
 body {
@@ -92,7 +59,7 @@ h1 {
 }
 
 h2 {
-  text-align: left;
+  text-align: center;
   padding-left: 4px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 25px;
@@ -111,3 +78,8 @@ h2 {
   border-radius: 50%;
 }
 
+div .row {
+  border: 3px solid grey;
+  margin: 5px;
+  padding: 4px;
+}

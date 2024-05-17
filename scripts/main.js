@@ -15,18 +15,28 @@ const render = async () => {
     <section>
         ${locationOptionsHTML}
     </section>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
     <section class="choices__food options">
         <h2>Food</h2>
         <div id="foodInventory"></div>
     </section>
+    </div>
+        <div class="col">
     <section class="choices__dessert options">
         <h2>Dessert</h2>
         <div id="dessertInventory"></div>
     </section>
+    </div>
+        <div class="col">
     <section class="choices__drink options">
         <h2>Drinks</h2>
         <div id="drinkInventory"></div>
     </section>
+    </div>
+    </div>
+    </div>
     <section id="currentOrder">
         <h2>Current Order</h2>
     </section>

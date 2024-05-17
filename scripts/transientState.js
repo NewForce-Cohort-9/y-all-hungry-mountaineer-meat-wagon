@@ -141,7 +141,7 @@ export const renderCurrentInventory = async (type) => {
             const item = location[itemType];
             inventoryHTML += `
                 <option value="${item.id}">
-                ${item.name} - $${item.price} • ${item.description}
+                ${item.name} - $${item.price} • ${item.description} - ${location.quantity}
                 </option>`;
         }
     });

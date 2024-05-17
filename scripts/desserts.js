@@ -7,7 +7,7 @@ const handleDessertChoice = (event) => {
 }
 
 export const dessertChoices = async () => {
-    const response = await fetch("http://localhost:8088/desserts")
+    const response = await fetch("http://localhost:8088/locationDesserts?_expand=dessert")
     const desserts = await response.json()
     document.addEventListener("change", handleDessertChoice)
     let dessertChoicesHTML = `<select id='dessert'>
@@ -15,7 +15,7 @@ export const dessertChoices = async () => {
 
     const divStringArray = desserts.map(
         (dessert) => {
-            return `<option value='${dessert.id}'>${dessert.name}-$${dessert.price} • ${dessert.description}</option>`
+            return `<option value='${dessert.id}'>${dessert.name}-$${dessert.price} • ${dessert.description} - ${dessert.quantity} </option>`
         }
     )
 
