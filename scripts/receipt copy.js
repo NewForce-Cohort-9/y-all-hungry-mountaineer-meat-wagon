@@ -6,26 +6,7 @@ import { orderList } from "./saveOrders.js"
 
 const receiptContainer = document.querySelector("#receiptContainer")
 
-const render = async () => {
-    const orderListHTML = await orderList();
-
-    const composedHTML = 
-    `
-    <section>
-        ${orderListHTML}
-    </section>
-    `;
-
-    receiptContainer.innerHTML = composedHTML;
-
-};
-
-document.addEventListener("newOrderCreated", render);
-document.addEventListener("locationSelected", render);
-
-render();
-
-
+const orderListHTML = await orderList()
 
 
 
