@@ -186,26 +186,26 @@
     {
       "id": 10,
       "truckId": 1,
-      "foodId":0,
-      "quantity":0
+      "foodId": 0,
+      "quantity": 0
     },
     {
       "id": 10,
       "truckId": 2,
-      "foodId":0,
-      "quantity":0
+      "foodId": 0,
+      "quantity": 0
     },
     {
       "id": 10,
       "truckId": 3,
-      "foodId":0,
-      "quantity":0
+      "foodId": 0,
+      "quantity": 0
     },
     {
       "id": 10,
       "truckId": 4,
-      "foodId":0,
-      "quantity":0
+      "foodId": 0,
+      "quantity": 0
     }
   ],
   "locationDrinks": [
@@ -266,26 +266,26 @@
     {
       "id": 10,
       "truckId": 1,
-      "drinkId":0,
-      "quantity":0
+      "drinkId": 0,
+      "quantity": 0
     },
     {
       "id": 10,
       "truckId": 2,
-      "drinkId":0,
-      "quantity":0
+      "drinkId": 0,
+      "quantity": 0
     },
     {
       "id": 10,
       "truckId": 3,
-      "drinkId":0,
-      "quantity":0
+      "drinkId": 0,
+      "quantity": 0
     },
     {
       "id": 10,
       "truckId": 4,
-      "drinkId":0,
-      "quantity":0
+      "drinkId": 0,
+      "quantity": 0
     }
   ],
   "locationDesserts": [
@@ -346,27 +346,27 @@
     {
       "id": 10,
       "truckId": 1,
-      "dessertId":0,
-      "quantity":0
+      "dessertId": 0,
+      "quantity": 0
     },
     {
       "id": 10,
       "truckId": 2,
-      "dessertId":0,
-      "quantity":0
+      "dessertId": 0,
+      "quantity": 0
     },
     {
       "id": 10,
       "truckId": 3,
-      "dessertId":0,
-      "quantity":0
+      "dessertId": 0,
+      "quantity": 0
     },
     {
       "id": 10,
       "truckId": 4,
-      "dessertId":0,
-      "quantity":0
+      "dessertId": 0,
+      "quantity": 0
     }
   ],
-  "orders":[]
+  "orders": []
 }
