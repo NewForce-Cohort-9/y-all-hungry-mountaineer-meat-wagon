@@ -10,7 +10,7 @@ export const orderList = async () => {
             orderHTML += `<p><img src="${item.img}" alt="${item.name}" style="width:50px;height:50px;"> ${item.name} - $${item.price}</p>`;
             subtotal += item.price;
         });
-        orderHTML += `<p><strong>Subtotal: $${subtotal.toFixed(2)}</strong></p>`;
+        orderHTML += `<p><strong>Total: $${subtotal.toFixed(2)}</strong></p>`;
         orderHTML += `</div><hr>`;
     }
     return orderHTML;
