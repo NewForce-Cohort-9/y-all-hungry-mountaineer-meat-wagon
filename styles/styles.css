@@ -1,12 +1,45 @@
-select#dessert {
-  width: 100%; 
+select#location {
+  width: 20%; 
   padding: 8px;
-  border: 1px solid #ccc; 
+  border: 1px solid #ffc400; 
+  border-radius: 4px; 
+  font-family: Arial, sans-serif; 
+  font-size: 14px; 
+  color: #fcfcfc; 
+  background-color: #002fb1; 
+}
+
+select#dessert {
+  width: 25%; 
+  padding: 8px;
+  border: 1px solid #0640dd; 
   border-radius: 4px; 
   font-family: Arial, sans-serif; 
   font-size: 14px; 
   color: #333; 
-  background-color: #fff; 
+  background-color: #ffc400; 
+}
+
+select#drink {
+  width: 25%; 
+  padding: 8px;
+  border: 1px solid #0640dd; 
+  border-radius: 4px; 
+  font-family: Arial, sans-serif; 
+  font-size: 14px; 
+  color: #333; 
+  background-color: #ffc400; 
+}
+
+select#food {
+  width: 25%; 
+  padding: 8px;
+  border: 1px solid #0640dd; 
+  border-radius: 4px; 
+  font-family: Arial, sans-serif; 
+  font-size: 14px; 
+  color: #333; 
+  background-color: #ffc400; 
 }
 
   
