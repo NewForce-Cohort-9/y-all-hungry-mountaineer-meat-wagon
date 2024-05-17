@@ -1,7 +1,18 @@
+select#location {
+  width: 100%; 
+  padding: 8px;
+  border: 3px solid #d9d9d9; 
+  border-radius: 4px; 
+  font-family: Arial, sans-serif; 
+  font-size: 14px; 
+  color: #333; 
+  background-color: #ffffff; 
+}
+
 select#dessert {
   width: 100%; 
   padding: 8px;
-  border: 1px solid #ccc; 
+  border: 3px solid #ccc; 
   border-radius: 4px; 
   font-family: Arial, sans-serif; 
   font-size: 14px; 
@@ -9,4 +20,72 @@ select#dessert {
   background-color: #fff; 
 }
 
-  
+select#drink {
+  width: 100%; 
+  padding: 8px;
+  border: 3px solid #ccc; 
+  border-radius: 4px; 
+  font-family: Arial, sans-serif; 
+  font-size: 14px; 
+  color: #333; 
+  background-color: #fff; 
+}
+
+select#food {
+  width: 100%; 
+  padding: 8px;
+  border: 3px solid #ccc; 
+  border-radius: 4px; 
+  font-family: Arial, sans-serif; 
+  font-size: 14px; 
+  color: #333; 
+  background-color: #fff; 
+}
+
+select#button {
+  width: 100%; 
+  padding: 8px;
+  border: 3px solid #ccc; 
+  border-radius: 4px; 
+  font-family: Arial, sans-serif; 
+  font-size: 14px; 
+  color: #333; 
+  background-color: #fff; 
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  position: relative;
+}
+
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(114, 114, 175);
+  text-align: top;
+  margin-left: 80px;
+  height: 70px;
+  line-height: 70px;
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  text-align: left;
+  padding-left: 4px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  color: #909090;
+}
+
+#unique-image-id {
+  margin: 2px;
+  border: solid 3px #cdcdcd;
+  max-width: 68px;
+  height: 68px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; 
+  border-radius: 50%;
+}
+
