@@ -1,6 +1,6 @@
 import { locationOptions } from "./locationsList.js";
 import { saveSubmission } from "./placeOrder.js";
-import { orderList } from "./saveOrders.js";
+// import { orderList } from "./saveOrders.js";
 import { renderCurrentInventory, fetchData } from "./transientState.js";
 
 const container = document.querySelector("#container");
@@ -9,7 +9,7 @@ const render = async () => {
     await fetchData(); // Ensure data is fetched before rendering
     const locationOptionsHTML = await locationOptions();
     const buttonHTML = saveSubmission();
-    const orderListHTML = await orderList();
+    // const orderListHTML = await orderList();
 
     const composedHTML = `
     <section>
@@ -32,7 +32,6 @@ const render = async () => {
     </section>
     <section>
         ${buttonHTML}
-        ${orderListHTML}
     </section>`;
 
     container.innerHTML = composedHTML;
