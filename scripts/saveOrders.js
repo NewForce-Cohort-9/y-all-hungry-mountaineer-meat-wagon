@@ -42,7 +42,7 @@ export const orderList = async () => {
                 orderHTML += `<div>${dessert.name} - $${dessert.price}</div>`
             }
         }
-        orderHTML += `<div><strong>Subtotal: $${subtotal.toFixed(2)}</strong></div>`
+         orderHTML += `<div><strong>Subtotal: $${subtotal.toFixed(2)}</strong></div>`
         orderHTML += `</div><hr>`
         
     }

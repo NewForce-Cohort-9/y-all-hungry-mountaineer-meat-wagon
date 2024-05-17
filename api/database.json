@@ -370,24 +370,24 @@
   ],
   "orders": [
     {
-      "foodId": 2,
-      "drinkId": 2,
+      "foodId": 4,
+      "drinkId": 4,
       "dessertId": 4,
-      "locationId": 2,
+      "locationId": 1,
       "currentOrder": [
         {
-          "id": 2,
-          "name": "Hot Me Momma Like a Wagon Wheel",
-          "price": 18.99,
-          "img": "https://www.shutterstock.com/shutterstock/photos/111139658/display_1500/stock-photo-double-hot-dog-111139658.jpg",
-          "description": "A traditional bratwurst, imported from directly from Bavaria and covered in cheese sauce."
+          "id": 4,
+          "name": "2 Hot dogs",
+          "price": 15.99,
+          "img": "https://upload.wikimedia.org/wikipedia/commons/8/8f/2_hot_dogs.jpg",
+          "description": "You know what is better than one hot dog?"
         },
         {
-          "id": 2,
-          "name": "Day Old Lemonade",
-          "price": 3.99,
-          "img": "https://sacevichsucksatmakinglemonade.weebly.com/uploads/3/0/4/4/30442936/s451622584557544819_p4_i1_w229.png",
-          "description": "Somewhat freshly squeezed lemonade."
+          "id": 4,
+          "name": "Coke or Pepsi",
+          "price": 2.99,
+          "img": "https://images.pexels.com/photos/2983100/pexels-photo-2983100.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "description": "It just depends on what we have today."
         },
         {
           "id": 4,
