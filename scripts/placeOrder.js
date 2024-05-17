@@ -1,10 +1,10 @@
-import { saveOrder } from "./transientState.js"
+import { saveOrder } from "./transientState.js";
 
 const handlePlaceOrderClick = (clickEvent) => {
     if (clickEvent.target.id === "saveSubmission") {
-        saveOrder()
+        saveOrder();
     }
-}
+};
 
 export const saveSubmission = () => {
     document.addEventListener("click", handlePlaceOrderClick)
