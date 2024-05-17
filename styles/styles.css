@@ -55,7 +55,7 @@ select#button {
 
 body {
   background-color: rgb(255, 255, 255);
-  position: relative; /* Ensure positioning context for absolute positioning */
+  position: relative;
 }
 
 h1 {
@@ -63,10 +63,10 @@ h1 {
   color: rgb(114, 114, 175);
   text-align: top;
   margin-left: 80px;
-  height: 70px; /* Adjust the height to your desired value */
-  line-height: 70px; /* Centers the text vertically */
-  position: relative; /* Establish positioning context */
-  z-index: 1; /* Ensure the h1 is above other content */
+  height: 70px;
+  line-height: 70px;
+  position: relative;
+  z-index: 1;
 }
 
 h2 {
@@ -81,11 +81,11 @@ h2 {
   margin: 2px;
   border: solid 3px #cdcdcd;
   max-width: 68px;
-  height: 68px; /* Set the height to match the h1 */
+  height: 68px;
   position: absolute;
-  top: 0; /* Position at the top of the container */
-  left: 0; /* Position at the left of the container */
-  z-index: 2; /* Ensure the image is above other content */
+  top: 0;
+  left: 0;
+  z-index: 2; 
   border-radius: 50%;
 }
 

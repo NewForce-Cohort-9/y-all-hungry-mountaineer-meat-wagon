@@ -1,26 +1,15 @@
-// import { foodChoices } from "./foods.js"
-// import { dessertChoices } from "./desserts.js"
-// import { drinkChoices } from "./drinks.js";
 import { locationOptions } from "./locationsList.js";
 import { saveSubmission } from "./placeOrder.js";
 import { orderList } from "./saveOrders.js";
-import { renderCurrentFoodInventory } from "./transientState.js";
-import { renderCurrentDrinkInventory } from "./transientState.js";
-import { renderCurrentDessertInventory } from "./transientState.js";
+import { renderCurrentInventory, fetchData } from "./transientState.js";
 
-const container = document.querySelector("#container")
+const container = document.querySelector("#container");
 
 const render = async () => {
-    const locationOptionsHTML = await locationOptions()
-    // const foodHTML = await foodChoices()
-    // const dessertChoicesHTML = await dessertChoices()
-    // const drinkHTML = await drinkChoices()
-    const buttonHTML = saveSubmission()
-    const orderListHTML = await orderList()
-    const inventoryFoodHTML = await renderCurrentFoodInventory()
-    const inventoryDrinkHTML = await renderCurrentDrinkInventory()
-    const inventoryDessertHTML= await renderCurrentDessertInventory()
-
+    await fetchData(); // Ensure data is fetched before rendering
+    const locationOptionsHTML = await locationOptions();
+    const buttonHTML = saveSubmission();
+    const orderListHTML = await orderList();
 
     const composedHTML = `
     <section>
@@ -28,28 +17,33 @@ const render = async () => {
     </section>
     <section class="choices__food options">
         <h2>Food</h2>
-        ${inventoryFoodHTML}
+        <div id="foodInventory"></div>
     </section>
     <section class="choices__dessert options">
         <h2>Dessert</h2>
-        ${inventoryDessertHTML}
+        <div id="dessertInventory"></div>
     </section>
     <section class="choices__drink options">
         <h2>Drinks</h2>
-        ${inventoryDrinkHTML}
+        <div id="drinkInventory"></div>
     </section>
     <section id="currentOrder">
         <h2>Current Order</h2>
     </section>
     <section>
         ${buttonHTML}
-            ${orderListHTML}
-    </section>`
+        ${orderListHTML}
+    </section>`;
 
-    container.innerHTML = composedHTML
-}
+    container.innerHTML = composedHTML;
 
-document.addEventListener("newOrderCreated", render)
-document.addEventListener("locationSelected", render)
+    // Call the inventory rendering functions after the base HTML is in place
+    await renderCurrentInventory('food');
+    await renderCurrentInventory('drink');
+    await renderCurrentInventory('dessert');
+};
 
-render()
+document.addEventListener("newOrderCreated", render);
+document.addEventListener("locationSelected", render);
+
+render();
