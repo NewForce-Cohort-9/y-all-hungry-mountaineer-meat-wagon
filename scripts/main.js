@@ -12,7 +12,7 @@ const render = async () => {
     // const orderListHTML = await orderList();
 
     const composedHTML = `
-    <section>
+    <section class="locOptions">
         ${locationOptionsHTML}
     </section>
     <div class="container text-center">
@@ -40,7 +40,7 @@ const render = async () => {
     <section id="currentOrder">
         <h2>Current Order</h2>
     </section>
-    <section>
+    <section class="placebutton">
         ${buttonHTML}
     </section>`;
 
