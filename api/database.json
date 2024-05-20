@@ -490,9 +490,39 @@
       "id": 4
     },
     {
+      "foodId": 1,
+      "drinkId": 4,
+      "dessertId": 4,
+      "locationId": 1,
+      "currentOrder": [
+        {
+          "id": 1,
+          "name": "1 Hot dog",
+          "price": 8.99,
+          "img": "https://live.staticflickr.com/1211/1010626961_ebffe9dafb_b.jpg",
+          "description": "A classic American ballpark hot dog."
+        },
+        {
+          "id": 4,
+          "name": "Coke or Pepsi",
+          "price": 2.99,
+          "img": "https://images.pexels.com/photos/2983100/pexels-photo-2983100.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "description": "It just depends on what we have today."
+        },
+        {
+          "id": 4,
+          "name": "Milkshake in a Bag",
+          "price": 9.99,
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfB8FOmMuib4ixwp33LFmQBg3kVWL66u5KWgOPVnndlw&s",
+          "description": "We will serve you a milkshake in a bag. Only comes in vanilla.."
+        }
+      ],
+      "id": 5
+    },
+    {
       "foodId": 2,
-      "drinkId": 2,
-      "dessertId": 3,
+      "drinkId": 3,
+      "dessertId": 2,
       "locationId": 2,
       "currentOrder": [
         {
@@ -503,11 +533,41 @@
           "description": "A traditional bratwurst, imported from directly from Bavaria and covered in cheese sauce."
         },
         {
+          "id": 3,
+          "name": "Bottled Water",
+          "price": 11.99,
+          "img": "https://images.pexels.com/photos/1000084/pexels-photo-1000084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "description": "Bottled Water imported from the most drought stricken country you can think of. Proceeds do NOT go to charity."
+        },
+        {
           "id": 2,
-          "name": "Day Old Lemonade",
-          "price": 3.99,
-          "img": "https://sacevichsucksatmakinglemonade.weebly.com/uploads/3/0/4/4/30442936/s451622584557544819_p4_i1_w229.png",
-          "description": "Somewhat freshly squeezed lemonade."
+          "name": "A-Lotto Choco Cookie",
+          "price": 10.99,
+          "img": "https://www.courtneyssweets.com/wp-content/uploads/2022/01/mini-chocolate-chip-cookies-33.jpg",
+          "description": "A small chocolate chip cookie that comes with a complimentary lottery ticket."
+        }
+      ],
+      "id": 6
+    },
+    {
+      "foodId": 3,
+      "drinkId": 4,
+      "dessertId": 3,
+      "locationId": 2,
+      "currentOrder": [
+        {
+          "id": 3,
+          "name": "Mountain Momma Meat Special",
+          "price": 20.99,
+          "img": "https://static.onecms.io/wp-content/uploads/sites/19/2016/08/08/velveeta-420x420-0000-chilicheesedog.jpg",
+          "description": "This specialty dish consists of two hot dogs wrapped in bacon and covered in relish. All on top of a burger bun."
+        },
+        {
+          "id": 4,
+          "name": "Coke or Pepsi",
+          "price": 2.99,
+          "img": "https://images.pexels.com/photos/2983100/pexels-photo-2983100.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "description": "It just depends on what we have today."
         },
         {
           "id": 3,
@@ -517,15 +577,7 @@
           "description": "Fudge so chewy it will never go down."
         }
       ],
-      "id": 5
-    },
-    {
-      "foodId": 0,
-      "drinkId": 0,
-      "dessertId": 0,
-      "locationId": 0,
-      "currentOrder": [],
-      "id": 6
+      "id": 7
     }
   ]
 }
