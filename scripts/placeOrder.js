@@ -9,7 +9,7 @@ const handlePlaceOrderClick = (clickEvent) => {
 export const saveSubmission = () => {
     document.addEventListener("click", handlePlaceOrderClick)
 
-    return "<button type='button' class='btn btn-outline-success' onclick=window.open('http://localhost:3000/receipt') id='saveSubmission'>Place Order</button>"
+    return "<button type='button' class='btn btn-success' onclick=window.open('http://localhost:3000/receipt') id='saveSubmission'>Place Order</button>"
 }
 
 

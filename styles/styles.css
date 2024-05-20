@@ -94,18 +94,26 @@ div .row {
   border: 3px solid grey;
   margin: 85px;
   padding: 40px;
-  background-color: rgb(191, 250, 252);
+  background-color: rgb(231, 252, 253);
 }
 
 section#currentOrder {
   width: 85%;
   border: 3px solid grey;
-  margin: 85px;
+  margin: auto;
   padding: 40px;
-  background-color: rgb(191, 250, 252);
+  background-color: rgb(231, 252, 253);
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: oblique;
   font-weight: 600;
+}
+
+.placebutton {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
 }
 

@@ -40,7 +40,7 @@ const render = async () => {
     <section id="currentOrder">
         <h2>Current Order</h2>
     </section>
-    <section>
+    <section class="placebutton">
         ${buttonHTML}
     </section>`;
 
