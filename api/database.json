@@ -698,6 +698,36 @@
         }
       ],
       "id": 11
+    },
+    {
+      "foodId": 1,
+      "drinkId": 0,
+      "dessertId": 0,
+      "locationId": 1,
+      "currentOrder": [
+        {
+          "id": 1,
+          "name": "1 Hot dog",
+          "price": 8.99,
+          "img": "https://live.staticflickr.com/1211/1010626961_ebffe9dafb_b.jpg",
+          "description": "A classic American ballpark hot dog."
+        },
+        {
+          "id": 0,
+          "name": "None",
+          "price": 0,
+          "img": "",
+          "description": ""
+        },
+        {
+          "id": 0,
+          "name": "None",
+          "price": 0,
+          "img": "",
+          "description": ""
+        }
+      ],
+      "id": 12
     }
   ]
 }
